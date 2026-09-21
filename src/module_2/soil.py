@@ -1,6 +1,6 @@
 import random
 
-moisture = random.randint(25, 40)
+moisture = random.randint(22, 25)
 
 
 def sample():
