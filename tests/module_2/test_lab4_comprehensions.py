@@ -15,7 +15,7 @@ def test_should_write_word_counts_for_words_longer_than_four_letters(monkeypatch
     # "address.txt" / writes "counts.csv" relative to the current directory.
     monkeypatch.syspath_prepend(str(MODULE_2_SRC))
     monkeypatch.chdir(tmp_path)
-    (tmp_path / "address.txt").write_text(
+    (tmp_path / "c:\\Users\\rself\\OneDrive\\Documents\\GitHub\\CSC121\\CSC121\\src\\module_2\\address.txt").write_text(
         "Apple apple BANANA banana Cherry cherry cherry Date fig doggone doggone"
     )
 
@@ -26,7 +26,7 @@ def test_should_write_word_counts_for_words_longer_than_four_letters(monkeypatch
 
     assert hasattr(sys.modules[MODULE_NAME], "main"), "comprehensions.py has no main() function. File may be blank"
 
-    with open(tmp_path / "counts.csv", newline="") as f:
+    with open(tmp_path / "c:\\Users\\rself\\OneDrive\\Documents\\GitHub\\CSC121\\CSC121\\src\\module_2\\counts.csv", newline="") as f:
         rows = list(csv.reader(f))
 
     assert rows == [
