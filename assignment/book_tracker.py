@@ -37,7 +37,8 @@ def view_books(library):
         print("Your library is empty. Add a book first!")
     else:
         for i in range(len(library)):
-            print(i + 1,".", library[i])
+            book = library[i]
+            print(i + 1, f". '{book["title"]}' - {book["author"]} ({book["pages"]} pages - approx. {book["hours"]} hours to read)", sep="")
 
 
 def main():
